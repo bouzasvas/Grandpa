@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hci.aueb.com.grandpa.calendar_activity"
+    android:background="#4A86E8">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/title_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ημερολόγιο"
+            android:id="@+id/title_text"
+            android:textColor="#000000"
+            android:textSize="50sp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#050000"
+        android:layout_below="@+id/title_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/seperator" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/calendar_layout">
+
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePicker"
+            android:layout_gravity="center_horizontal|top"
+            android:calendarViewShown="true"
+            android:spinnersShown="false" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/calendar_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/reminder_layout"
+        android:onClick="createReminder_buttonOnclick">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ΠΑΤΗΣΤΕ ΕΔΩ ΓΙΑ ΠΡΟΣΘΗΚΗ ΥΠΕΝΘΥΜΙΣΗΣ"
+            android:id="@+id/createReminder_button"
+            android:textColor="#000000"
+            android:onClick="createReminderButtonOnclick" />
+    </FrameLayout>
+
+</RelativeLayout>

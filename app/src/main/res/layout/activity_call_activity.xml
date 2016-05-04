@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hci.aueb.com.grandpa.call_activity"
+    android:background="#4a86e8">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/number">
+
+        <TextView
+            android:layout_width="262dp"
+            android:layout_height="126dp"
+            android:textSize="40dp"
+            android:contextClickable="false"
+            android:gravity="center_vertical"
+            android:hint="αριθμός"
+            android:inputType="phone"
+            android:maxLines="2"
+            android:phoneNumber="true"
+            android:textColor="#000000"
+            android:autoText="false"
+            android:id="@+id/num"
+            android:textAlignment="center" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="#fc0d1b">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="ΣΒΗΣΙΜΟ"
+                android:id="@+id/clear_button"
+                android:textColor="#000000"
+                android:background="@drawable/selector"
+                android:onClick="clearClick"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#050000"
+        android:layout_below="@+id/number"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/seperator" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seperator"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/calling_buttons">
+
+        <TextView
+            android:layout_width="253dp"
+            android:layout_height="74dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="ΚΛΗΣΗ"
+            android:id="@+id/calling_text"
+            android:textColor="#000000"
+            android:textSize="50sp"
+            android:gravity="center"
+            android:onClick="callClick"
+            android:background="@drawable/selector" />
+
+        <ImageButton
+            android:layout_width="128dp"
+            android:layout_height="74dp"
+            android:id="@+id/calling_button"
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/calling_button1"
+            android:background="@drawable/selector"
+            android:onClick="callClick" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#050000"
+        android:layout_below="@+id/calling_buttons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/seperator2" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/seperator2"
+        android:id="@+id/numbers"
+        android:rowCount="4"
+        android:columnCount="3"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:rowOrderPreserved="false"
+        android:transitionGroup="false"
+        android:useDefaultMargins="true">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/number1"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:src="@drawable/n1"
+            android:background="@drawable/selector"
+            android:onClick="number1Click" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/number2"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:src="@drawable/n2"
+            android:background="@drawable/selector"
+            android:onClick="number2Click" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/number3"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:src="@drawable/n3"
+            android:background="@drawable/selector"
+            android:onClick="number3Click"
+            android:cropToPadding="false" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/number4"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:src="@drawable/n4"
+            android:background="@drawable/selector"
+            android:onClick="number4Click" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/number5"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:src="@drawable/n5"
+            android:background="@drawable/selector"
+            android:onClick="number5Click" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/number7"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:src="@drawable/n7"
+            android:background="@drawable/selector"
+            android:onClick="number7Click" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/number8"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:src="@drawable/n8"
+            android:background="@drawable/selector"
+            android:onClick="number8Click" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/number9"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:src="@drawable/n9"
+            android:background="@drawable/selector"
+            android:onClick="number9Click" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/asterisk"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:src="@drawable/asterisk"
+            android:background="@drawable/selector"
+            android:onClick="asteriskClick" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/number0"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:src="@drawable/n0"
+            android:background="@drawable/selector"
+            android:onClick="number0Click" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/sharp"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:src="@drawable/sharpv1"
+            android:background="@drawable/selector"
+            android:paddingBottom="10dp"
+            android:onClick="sharpClick" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/number6"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:src="@drawable/n6"
+            android:background="@drawable/selector"
+            android:onClick="number6Click" />
+    </GridLayout>
+
+</RelativeLayout>

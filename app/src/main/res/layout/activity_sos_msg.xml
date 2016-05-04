@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hci.aueb.com.grandpa.sos_msg"
+    android:background="#4A86E8">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/title_layout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ορισμός μηνύματος SOS προς αποστολή"
+            android:id="@+id/setting_title"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textAlignment="center" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#050000"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/seperator" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_layout"
+        android:layout_alignLeft="@+id/title_layout"
+        android:layout_alignStart="@+id/title_layout"
+        android:id="@+id/message_layout"
+        android:layout_above="@+id/button3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ορίστε παρακάτω ένα μήνυμα το οποίο θα στέλνεται στις αγαπημένες σας επαφές σε περίπτωση ανάγκης"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sos_message"
+            android:layout_gravity="center_horizontal"
+            android:background="#FFFFFF"
+            android:textColor="#cd1111"
+            android:gravity="top"
+            android:hint="Εδώ πληκτρολογείτε το μήνυμα σας..." />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ακύρωση"
+        android:id="@+id/button3"
+        android:textSize="30sp"
+        android:onClick="cancelOnClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/message_layout"
+        android:layout_alignStart="@+id/message_layout" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Αποθήκευση"
+        android:id="@+id/button4"
+        android:textSize="30sp"
+        android:onClick="saveOnClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/message_layout"
+        android:layout_alignEnd="@+id/message_layout" />
+
+</RelativeLayout>

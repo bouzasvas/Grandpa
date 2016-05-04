@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hci.aueb.com.grandpa.MainActivity"
+    android:background="#4A86E8"
+    android:id="@+id/background">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:background="#699CFC"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="false"
+        android:id="@+id/datetime"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Παρ 05 Φεβ 2016 03:07 μ.μ."
+            android:id="@+id/dateText"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:autoText="true"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#050000"
+        android:layout_below="@+id/datetime"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/seperator" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:id="@+id/favouriteContacts"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/seperator"
+        android:layout_alignLeft="@+id/seperator"
+        android:layout_alignStart="@+id/seperator">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fav1"
+            android:src="@drawable/george1_contact"
+            android:layout_weight="1"
+            android:background="@drawable/selector"
+            android:onClick="fav1Onclick" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fav2"
+            android:src="@drawable/mary1_contact"
+            android:layout_weight="1"
+            android:background="@drawable/selector"
+            android:layout_below="@+id/datetime"
+            android:layout_centerHorizontal="true"
+            android:onClick="fav2Onclick" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fav3"
+            android:src="@drawable/add128"
+            android:layout_weight="1"
+            android:background="@drawable/selector"
+            android:layout_alignTop="@+id/favouriteContacts"
+            android:layout_toRightOf="@+id/fav2"
+            android:layout_toEndOf="@+id/fav2"
+            android:onClick="selectFavContact" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#050000"
+        android:layout_below="@+id/favouriteContactsTexts"
+        android:id="@+id/seperator2" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/favouriteContactsTexts"
+        android:layout_below="@+id/favouriteContacts"
+        android:layout_alignLeft="@+id/favouriteContacts"
+        android:layout_alignStart="@+id/favouriteContacts">
+
+        <TextView
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/fav1text"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:text="Γιώργος" />
+
+        <TextView
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/fav2text"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:text="Μαρία" />
+
+        <TextView
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/fav3text"
+            android:textSize="20sp"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_below="@+id/seperator2"
+        android:layout_alignLeft="@+id/seperator2"
+        android:layout_alignStart="@+id/seperator2"
+        android:id="@+id/functions">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/call_button"
+                android:src="@drawable/call_button"
+                android:background="@drawable/selector"
+                android:onClick="callButtonClick"
+                android:adjustViewBounds="false" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Κλήση"
+                android:id="@+id/callText"
+                android:textAlignment="center"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#050000"
+            android:id="@+id/seperator4" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/calendar_button"
+                android:src="@drawable/calendar_button"
+                android:background="@drawable/selector"
+                android:onClick="calendarButtonClick" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Ημερολόγιο"
+                android:id="@+id/calendarText"
+                android:textAlignment="center"
+                android:layout_gravity="right|top" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/functions"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/functionsText"
+        android:weightSum="2">
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#050000"
+        android:layout_below="@+id/functionsText"
+        android:id="@+id/seperator3" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/functionsText"
+        android:layout_alignLeft="@+id/seperator3"
+        android:layout_alignStart="@+id/seperator3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Έκτακτη Ανάγκη"
+            android:id="@+id/sosText"
+            android:layout_gravity="center_horizontal|bottom" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageButton"
+            android:src="@drawable/sos_buttonv1"
+            android:layout_gravity="center"
+            android:background="@drawable/selector"
+            android:onClick="sosButtonOnclick" />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Πατήστε το + για προσθήκη επαφής"
+        android:id="@+id/textView"
+        android:layout_below="@+id/datetime"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="#000000" />
+
+</RelativeLayout>
